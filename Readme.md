@@ -22,17 +22,11 @@ npm install -g lambdatest-cypress-cli
 
 Before using this plugin, save the LambdaTest username and access key to environment variables LT_USERNAME and LT_ACCESS_KEY, as described in [LambdaTest Documentation](https://www.lambdatest.com/support/docs/using-environment-variables-for-authentication-credentials).
 
+Please enter your username and access key in "lambdatest_auth" section in the lambdatest-config.json file that you would find in the root directory.
+
 ## Step 2: Setup configurations on which you want to run your test
-Once you have installed the LambdaTest-Cypress CLI, now you need to setup the configuration. You can do that using the below command:
 
-
-
-
-```bash
-# Create a sample LambdaTest Cypress configuration file
-lambdatest-cypress init
-```
-In this configuration file, setup:
+In the lambdatest-config.json file:
 - **auth**: Firstly you need to set up your LambdaTest credentials that will help you run your test on the Online Selenium Grid.
 - **browsers**: Secondly, you need to set up the browser and OS combinations upon which you want the Cypress testing to be done. You can choose among the 2000+ browser and OS combinations that LambdaTest provides.
 - **run_settings**: Lastly, you need to set the other desired capabilities of your Cypress test suite, which includes cypress_version, build_name, visual feedback settings, number of parallel sessions, etc.
@@ -44,11 +38,15 @@ Once you have the above two pre-requisites ready, you can execute your Cypress t
 
 lambdatest-cypress run --cy="--config-file ./cypress.config.js"
 ```
+in the new versions of cypress, we have to include the path of cypress config file when we execute our test. Because the cypress config file is in root directory in this repo, the above command would work fine.
 
 As soon as the tests starts executing, you can view them running. Just visit your [LambdaTest Automation Dashboard](https://beta-automation.lambdatest.com/).
 
 For each test, you can view the live video feed, screenshots for each test run, view console logs, terminal logs, and do much more using the LambdaTest platform.
 
+For Smart-UI - 
+Smart UI settings are configured in the "run_settings" section in the lambdatest-config.json file. You can define your build name for smart ui project and whether the current build should be baseline etc. Consult the following link - 
+https://www.lambdatest.com/support/docs/smart-ui-cypress/#steps-to-run-your-first-test
 
 
 To learn more about LambdaTest Cypress CLI, refer to the [LambdaTest Cypress Documentation](https://www.lambdatest.com/support/docs/getting-started-with-cypress-testing/)
