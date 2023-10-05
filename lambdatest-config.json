@@ -1,0 +1,44 @@
+{
+   "lambdatest_auth": {
+      "username": "<your username>",
+      "access_key": "<your access key>"
+   },
+   "browsers": [
+      {
+         "browser": "Chrome",
+         "platform": "MacOS Big sur",
+         "versions": [
+            "latest-1"
+         ]
+      },
+      {
+         "browser": "MicrosoftEdge",
+         "platform": "MacOS Big sur",
+         "versions": [
+            "latest-1"
+         ]
+      }
+   ],
+   "run_settings": {
+      
+      "reporter_config_file": "base_reporter_config.json",
+      "build_name": "build-name 2",
+      "parallels": 100,
+      "specs": "cypress/e2e/2-advanced-examples/actions0.cy.js",
+      "smart_ui":{
+         "project": "cypress-smartui-demo"
+         
+      },
+      "ignore_files": "",
+      "network": true,
+      "headless": false,
+      "npm_dependencies": {
+         "cypress": "12.0"
+      }
+   },
+   
+   "tunnel_settings": {
+      "tunnel": false,
+      "tunnel_name": null
+   }
+}
